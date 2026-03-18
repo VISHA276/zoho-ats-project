@@ -77,7 +77,7 @@ Static HTML/JS dashboard in `frontend/` folder:
 **Run Frontend:**
 1. Open `frontend/index.html` in browser
 OR
-2. `npx live-server frontend/` (auto-reload, http://127.0.0.1:8080)
+2. `npx live-server frontend/` (auto-reload, http://127.0.0.1:65050/)
 
 **Full Stack Test:**
 1. Backend: `cd ats-microservice && npx serverless offline start` (localhost:3000)
