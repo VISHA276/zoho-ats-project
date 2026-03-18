@@ -1,0 +1,37 @@
+service: ats-microservice
+
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: python3.12
+  region: us-east-1
+
+plugins:
+  - serverless-offline
+
+package:
+  individually: true
+
+functions:
+  jobs:
+    handler: handler.jobs
+    events:
+      - http:
+          path: jobs
+          method: get
+          cors: true
+  candidates:
+    handler: handler.candidates
+    events:
+      - http:
+          path: candidates
+          method: post
+          cors: true
+  applications:
+    handler: handler.applications_api
+    events:
+      - http:
+          path: applications
+          method: get
+          cors: true
